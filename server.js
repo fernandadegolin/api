@@ -17,7 +17,12 @@ app.get('/clients/:id', function (req, res){
     res.json(client);
 });
 
-app.post('/clients', function (req, res){});
+app.post('/clients', function (req, res){
+    const {name, email} = req.body;
+
+    res.json ({ name, email });
+
+});
 app.put('/clients/:id', function (req, res){});
 app.delete('/clients/:id', function (req, res){});
 
